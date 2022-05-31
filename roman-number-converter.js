@@ -1,0 +1,1 @@
+const reguarExp = new RegExp('abc'); // this is the beginning of the regex
