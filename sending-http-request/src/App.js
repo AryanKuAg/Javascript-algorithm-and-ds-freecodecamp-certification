@@ -6,11 +6,18 @@ import './App.css';
 function App() {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    fetch('https://swapi.dev/api/films/').then((data) => data.json()).then((q) => {
-      setData(q.results)
-      // console.log(q.results)
-    }).catch(console.log)
+  useEffect(async () => {
+    try{
+      let fetchedData = await fetch('https://swapi.dev/api/films/')
+    const jsonData = await fetchedData.json() 
+    
+    setData(jsonData)
+     
+    } catch (e) {
+      console.log('You code has some errors, my friend, don"t worry, its to imporve your coding, take this in a positive way ', e);
+    }
+    
+    
   }, []);
   const dummyMovies = [
     {
