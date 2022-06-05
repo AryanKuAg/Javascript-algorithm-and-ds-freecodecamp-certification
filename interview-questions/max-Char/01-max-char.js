@@ -20,4 +20,4 @@ const maxChar = (str) => {
     return maxChar;
 }
 
-console.log(maxChar('aaaaabbbbbbbaaabbcsdwrdd'))
+console.log(maxChar('aaaaabbbbbbbaaa                       bbcsdwrdd'))
