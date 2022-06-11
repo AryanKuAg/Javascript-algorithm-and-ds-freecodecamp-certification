@@ -1,8 +1,11 @@
 import React from 'react'
 import styles from "./App.module.css"
 import Sample from "./Sample"
+import nagin from './KumKum';
+import MyForm from './MyForm';
 
 function App() {
+  console.log(nagin())
   // A part of the component where the data lives.
   const s = <Sample name = 'aryan button my friend'/>;
   const pp = 
@@ -15,6 +18,7 @@ function App() {
   // A part where UI lives
   return (
     <div >
+      <MyForm />
       {s}{pp}
     </div>
   )
