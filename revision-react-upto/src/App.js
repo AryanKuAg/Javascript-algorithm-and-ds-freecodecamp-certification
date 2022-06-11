@@ -3,10 +3,19 @@ import styles from "./App.module.css"
 import Sample from "./Sample"
 
 function App() {
+  // A part of the component where the data lives.
+  const s = <Sample name = 'aryan button my friend'/>;
+  const pp = 
+  <p className={styles.panel}>This is it my friend</p> 
+
+
+
+
+
+  // A part where UI lives
   return (
     <div >
-      <Sample name = 'aryan button my friend'/>
-      <p className={styles.panel}>This is it my friend</p> 
+      {s}{pp}
     </div>
   )
 }
