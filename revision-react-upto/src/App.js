@@ -3,6 +3,7 @@ import styles from "./App.module.css"
 import Sample from "./Sample"
 import nagin from './KumKum';
 import MyForm from './MyForm';
+import DynamicList from './DynamicList';
 
 function App() {
   console.log(nagin())
@@ -11,14 +12,17 @@ function App() {
   const pp = 
   <p className={styles.panel}>This is it my friend</p> 
 
-
+  function liftingTheStateUp(data){
+    console.log('liftingthestateup',data)
+  }
 
 
 
   // A part where UI lives
   return (
     <div >
-      <MyForm />
+      <MyForm fx={liftingTheStateUp}/>
+      <DynamicList />
       {s}{pp}
     </div>
   )

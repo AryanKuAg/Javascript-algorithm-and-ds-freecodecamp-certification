@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function MyForm() {
+function MyForm(props) {
     const [value, setValue] = useState({name:'', age:''})
 
     const nameChangeHandler = (event) => {
@@ -19,15 +19,16 @@ function MyForm() {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    console.log('name',value.name, 'age', value.age);
+    // console.log('name',value.name, 'age', value.age);
+    props.fx(value.name)
   }
   // console.log('form form form')
   return (
     <form onSubmit={submitHandler}>
-        <label>Name:</label>
-        <input type='text' onChange={nameChangeHandler} value={value.name}/>
-        <label>Age:</label>
-        <input type='number' onChange={ageChangeHandler} value={value.age}/>
+        <label htmlFor='name'>Name:</label>
+        <input id='name' type='text' onChange={nameChangeHandler} value={value.name}/>
+        <label htmlFor='age'>Age:</label>
+        <input id='age' type='number' onChange={ageChangeHandler} value={value.age}/>
         <input type='submit'/>
     </form>
   )
