@@ -6,6 +6,7 @@ import MyForm from './MyForm';
 import DynamicList from './DynamicList';
 import SideEffect from './SideEffect';
 import ReducerWork from './ReducerWork';
+import Ctx from './Ctx';
 
 function App() {
   console.log(nagin())
@@ -23,6 +24,7 @@ function App() {
   // A part where UI lives
   return (
     <React.Fragment >
+      <Ctx/>
       <ReducerWork />
       <MyForm fx={liftingTheStateUp}/>
       <DynamicList />
