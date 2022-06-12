@@ -1,7 +1,17 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function MyForm(props) {
     const [value, setValue] = useState({name:'', age:''})
+
+    useEffect(() => {
+        let timer = setTimeout(() => {
+          console.log('timer time rtime r');
+        }, 3000)
+
+        return () => {
+          clearTimeout(timer)
+        }
+    }, [value])
 
     const nameChangeHandler = (event) => {
         setValue((pre) => {

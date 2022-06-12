@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useRef} from 'react'
 
 const theList = ['aryan', 'agrawal', 'is', 'the','super','hero','man','wait','what?']
 
 function DynamicList() {
+    const pRef= useRef();
   return (
-    <div>
-        
+    <React.Fragment>
+        <p ref={pRef}>This is not for fun, right?</p>
+        <button onClick={() =>{ 
+            console.log(pRef.current.innerHTML)
+        }}>Ref button</button>
         {
         theList.map((e) => {
             if(e.length < 4) return ;
@@ -13,8 +17,14 @@ function DynamicList() {
         })}
         <p>======================================</p>
         
-        </div>
+        </React.Fragment>
   )
 }
 
 export default DynamicList
+
+// we use useEffect for the side effect
+// we uses useEffect for the side effect.
+// useEffect(() => {}, [list of dependencies])
+
+// the function will run whenever the list of dependencies changes. 

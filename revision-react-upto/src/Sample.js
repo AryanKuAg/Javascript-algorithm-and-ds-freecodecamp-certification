@@ -1,6 +1,8 @@
 import React from 'react'
 import BetaMera from './BetaMera';
 import { useState } from 'react';
+import  ReactDOM  from 'react-dom';
+import SideEffect from './SideEffect';
 
 function Sample(props) {
   // DATA
@@ -20,12 +22,14 @@ function Sample(props) {
 
   // UI
   return (
-    <div>
+    <React.Fragment>
+    
       {myp}
       {poop}
       <button style={localStyle} >{name}</button>
       {betamera}
-    </div>
+      {ReactDOM.createPortal(<p style={{zIndex: 100000, position: 'absolute'}}>THIS IS A PORTAL BABY</p>,document.getElementById('portal'))}
+    </React.Fragment>
   )
 }
 

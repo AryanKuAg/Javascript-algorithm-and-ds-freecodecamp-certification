@@ -4,6 +4,8 @@ import Sample from "./Sample"
 import nagin from './KumKum';
 import MyForm from './MyForm';
 import DynamicList from './DynamicList';
+import SideEffect from './SideEffect';
+import ReducerWork from './ReducerWork';
 
 function App() {
   console.log(nagin())
@@ -15,16 +17,18 @@ function App() {
   function liftingTheStateUp(data){
     console.log('liftingthestateup',data)
   }
-
+  const sideEffect = <SideEffect />
 
 
   // A part where UI lives
   return (
-    <div >
+    <React.Fragment >
+      <ReducerWork />
       <MyForm fx={liftingTheStateUp}/>
       <DynamicList />
+      {sideEffect}
       {s}{pp}
-    </div>
+    </React.Fragment>
   )
 }
 
