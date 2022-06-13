@@ -11,6 +11,7 @@ import Ctx from './Ctx';
 import ForWard from './ForWard';
 import Draw from './Draw';
 import Organ from './alternative/Organ'
+import Internet from './Internet';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
   // A part where UI lives
   return (
     <React.Fragment >
+      <Internet />
       <Organ />
       <Draw data={{'height': 20, 'width': 20}}/>
       <ForWard ref={fff}/>
