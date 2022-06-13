@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react'
+import React, {useReducer, memo} from 'react'
 
 function myReducerFunction(prev, action) {
 
@@ -28,4 +28,4 @@ function Rd() {
   )
 }
 
-export default Rd
+export default memo(Rd)

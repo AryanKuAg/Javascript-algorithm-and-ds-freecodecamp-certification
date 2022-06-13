@@ -49,4 +49,4 @@ function MyForm(props) {
   )
 }
 
-export default MyForm
+export default React.memo(MyForm)

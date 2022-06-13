@@ -21,4 +21,4 @@ function SideEffect(props) {
   )
 }
 
-export default SideEffect
+export default React.memo(SideEffect)

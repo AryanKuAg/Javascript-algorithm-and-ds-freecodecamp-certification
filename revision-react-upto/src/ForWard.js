@@ -13,6 +13,6 @@ const ForWard = forwardRef((props, ref) => {
 // }
 
 
-export default ForWard;
+export default React.memo(ForWard);
 
 
