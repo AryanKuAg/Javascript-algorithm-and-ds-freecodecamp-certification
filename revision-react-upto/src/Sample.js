@@ -1,6 +1,6 @@
 import React from 'react'
 import BetaMera from './BetaMera';
-import { useState , useCallback} from 'react';
+import { useState , useCallback, useMemo} from 'react';
 import  ReactDOM  from 'react-dom';
 import SideEffect from './SideEffect';
 
@@ -9,6 +9,16 @@ function Sample(props) {
   const [nn, setNn] = useState(true);
   const name = props.name.repeat(10);
   const localStyle = {'color': 'red', 'fontSize': 18}
+
+  const heavyData = useMemo(() => {
+    let list = [982,5,2,65,234,2,562,4,2,562,3,26,2,34,26,2]
+
+    return list.sort((a,b) => a - b)
+  },[ ])
+
+  const weightedData = useMemo(() => {
+    return 999999999999999999;
+  }, [])
 
   const clickHandler = useCallback(() => {
     setNn((pre) => !pre)

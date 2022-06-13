@@ -8,7 +8,7 @@ function Ctx() {
     const presspress = useCallback(() => {
         myCtxData.pressMe()
         setAge(myCtxData.age)
-    }, [myCtxData.age])
+    }, [])
     
   return (
     <div>Ctx 
