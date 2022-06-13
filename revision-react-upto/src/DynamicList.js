@@ -1,8 +1,11 @@
-import React, {useRef} from 'react'
+import React, {useRef, useContext} from 'react'
+import MyContext from './store/somethingtostore'
 
 const theList = ['aryan', 'agrawal', 'is', 'the','super','hero','man','wait','what?']
 
 function DynamicList() {
+  let cctx = useContext(MyContext);
+  console.log('cctx',cctx)
     const pRef= useRef();
   return (
     <React.Fragment>

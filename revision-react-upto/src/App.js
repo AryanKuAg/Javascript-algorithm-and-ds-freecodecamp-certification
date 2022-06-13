@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useRef, useEffect} from 'react'
 import styles from "./App.module.css"
 import Sample from "./Sample"
 import nagin from './KumKum';
@@ -7,8 +7,12 @@ import DynamicList from './DynamicList';
 import SideEffect from './SideEffect';
 import ReducerWork from './ReducerWork';
 import Ctx from './Ctx';
+import MyContext from './store/somethingtostore'
+import ForWard from './ForWard';
+import Draw from './Draw';
 
 function App() {
+  const fff = useRef();
   console.log(nagin())
   // A part of the component where the data lives.
   const s = <Sample name = 'aryan button my friend'/>;
@@ -21,15 +25,29 @@ function App() {
   const sideEffect = <SideEffect />
 
 
+  useEffect(() => {
+    fff.current.focus();
+    console.log("fffffffff")
+  }, [])
+  
+
+
+
+
+
+
+
   // A part where UI lives
   return (
     <React.Fragment >
-      <Ctx/>
+      <Draw data={{'height': 20, 'width': 20}}/>
+      <ForWard ref={fff}/>
       <ReducerWork />
       <MyForm fx={liftingTheStateUp}/>
       <DynamicList />
       {sideEffect}
       {s}{pp}
+      <Ctx/>
     </React.Fragment>
   )
 }

@@ -1,0 +1,15 @@
+.dance {
+    width: 500px;
+    height: 500px;
+    background-color: orangered;
+    animation: dancing 5s ease-out;
+}
+
+@keyframes dancing {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
