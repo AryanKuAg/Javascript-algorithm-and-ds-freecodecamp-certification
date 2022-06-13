@@ -2,7 +2,7 @@
     width: 500px;
     height: 500px;
     background-color: orangered;
-    animation: dancing 5s ease-out;
+    animation: dancing 5s ease infinite;
 }
 
 @keyframes dancing {

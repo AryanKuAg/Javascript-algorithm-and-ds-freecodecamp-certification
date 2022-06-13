@@ -7,9 +7,11 @@ import DynamicList from './DynamicList';
 import SideEffect from './SideEffect';
 import ReducerWork from './ReducerWork';
 import Ctx from './Ctx';
-import MyContext from './store/somethingtostore'
+// import MyContext from './store/somethingtostore'
 import ForWard from './ForWard';
 import Draw from './Draw';
+import Organ from './alternative/Organ'
+
 
 function App() {
   const fff = useRef();
@@ -40,6 +42,7 @@ function App() {
   // A part where UI lives
   return (
     <React.Fragment >
+      <Organ />
       <Draw data={{'height': 20, 'width': 20}}/>
       <ForWard ref={fff}/>
       <ReducerWork />
