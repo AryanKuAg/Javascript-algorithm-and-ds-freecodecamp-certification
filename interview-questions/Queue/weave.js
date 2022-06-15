@@ -5,7 +5,7 @@ const Queue = require( "./01-queue")
 const weave = (queueOne, queueTwo)=> {
 
     const combinedQueue = new Queue();
-    let alter = false;
+    let alter = true;
     while(queueOne.peek() !== undefined || queueTwo.peek() !== undefined){
         // console.log(queueOne.peek(), queueTwo.peek())
         if (alter && queueOne.peek() !== undefined){
