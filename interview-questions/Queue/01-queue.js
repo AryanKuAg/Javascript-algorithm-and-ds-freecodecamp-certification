@@ -10,10 +10,13 @@ class Queue {
     remove() {
         return this.list.pop()
     }
+
+
+    peek () {
+        return this.list[this.list.length - 1]
+    }
 }
 
-let q = new Queue()
+console.log(typeof new Queue().peek())
 
-q.add('popat')
-q.add('lal')
-console.log(q.remove())
+module.exports = Queue
