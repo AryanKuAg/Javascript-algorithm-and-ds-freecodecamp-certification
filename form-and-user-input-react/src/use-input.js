@@ -1,23 +1,29 @@
-import {useState} from "react"
+// we gonna make a generic hook that will check all kind of input validation
+import { useState } from "react";
 
-const useInput = (validateValue) => {
-    const [enteredValue, setEnteredValue] = useState('')
+const useInput = (validationFunction)  => {
+    const [inputValue, setInputValue] = useState('');
     const [isTouched, setIsTouched] = useState(false);
 
-    const valueIsValid = validateValue(enteredValue)
-    const hasError = !valueIsVaild && isTouched;
+    const isValid  = validationFunction(inputValue)
+    const isError = !isValid && isTouched;
 
-    const valueChangeHandler = (event) => {
-        setEnteredValue(event.target.value);
+    const inputChangeHandler = event => {
+        setInputValue(event.target.value)
     }
 
-    const inputBlurHandler = (event) => {
-        setIsTouched(true);
+    const inputBlurHandler = _ => {
+        setIsTouched(true)
+    }
+
+    const reset = _ => {
+        setInputValue('')
+        setIsTouched(false)
     }
 
     return {
-        value: enteredValue, hasError, valueChangeHandler, inputBlurHandler
+        value: inputValue, isError,isValid,  inputChangeHandler, inputBlurHandler, reset 
     }
 }
 
-export default useInput;
+export default useInput
