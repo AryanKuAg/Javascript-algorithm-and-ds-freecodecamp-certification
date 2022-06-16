@@ -1,0 +1,29 @@
+label {
+    display: block;
+}
+
+input {
+    display: inline-block;
+    margin: 5px auto;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    font-size: 30px;
+    padding: 10px 20px;
+}
+
+.orderForm__submit {
+    display: block;
+    padding: 20px;
+    margin: 10px auto;
+    float: right;
+    border-radius: 15px;
+   
+    border-radius: 16px;
+}
+
+.orderForm__error_para{
+    color: red;
+    margin: 5px;
+}
