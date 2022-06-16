@@ -17,6 +17,6 @@ class Queue {
     }
 }
 
-console.log(typeof new Queue().peek())
+// console.log(typeof new Queue().peek())
 
 module.exports = Queue
