@@ -1,6 +1,7 @@
 import React from 'react'
 import "./OrderForm.css"
 import useCheckInput from '../use-check-input'
+import axiosInstance from '../axios.js'
 
 function OrderForm() {
   const {value: firstName , valueChangeHandler: firstNameChangeHandler, blurHandler: firstNameBlurHandler, reset: firstNameReset, isValid: firstNameIsValid, isError: firstNameIsError } = useCheckInput((v) => v.trim().length > 0)
@@ -16,18 +17,20 @@ function OrderForm() {
 
   function onSubmitHandler (event) {
     event.preventDefault();
-    console.log('the thing')
+    // console.log('the thing')
 
-    if(!firstNameIsValid || !lastNameIsValid || !phoneIsValid || !addressIsValid){
-      return ;
-    }
+    // if(!firstNameIsValid || !lastNameIsValid || !phoneIsValid || !addressIsValid){
+    //   return ;
+    // }
 
+    axiosInstance.get('/something').then((data) => {
+      console.log(data)
+    }).catch(console.log)
 
-
-    firstNameReset();
-    lastNameReset();
-    phoneReset();
-    addressReset();
+    // firstNameReset();
+    // lastNameReset();
+    // phoneReset();
+    // addressReset();
   }
   let isFormValid = false;
    isFormValid = !firstNameIsError && !lastNameIsError && !phoneIsError && !addressIsError
@@ -46,11 +49,11 @@ function OrderForm() {
         <label htmlFor='address'>Address</label>
         <input type='text' value={address} onChange={addressChangeHandler} onBlur={addressBlurHandler}/> 
         {addressIsError && <p className="orderForm__error_para">Address is not Valid!</p>}
-        <button disabled={!isFormValid} type='submit' className='orderForm__submit'>Place Order</button>
+        <button  type='submit' className='orderForm__submit'>Place Order</button>
     </form> 
   )
 }
-
+// disabled={!isFormValid}
 export default OrderForm
 
 // first name 

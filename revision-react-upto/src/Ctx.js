@@ -1,7 +1,9 @@
 import React, {useContext, useState, useCallback} from 'react'
 import ctxData from './store/somethingtostore'
+import useHooker from './Hooker';
 
 function Ctx() {
+    console.log('hhhhhhhhhhhok',useHooker())
     const myCtxData = useContext(ctxData);
     const [age, setAge] =  useState(myCtxData.age);
 

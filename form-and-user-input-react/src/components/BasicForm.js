@@ -13,7 +13,8 @@ const BasicForm = (props) => {
     isFormValid = true;
   }
 
-  const submitFormHandler = () =>  {
+  const submitFormHandler = (e) =>  {
+    e.preventDefault()
     if(isFirstNameError || isLastNameError || isEmailError){
       return;
     }
