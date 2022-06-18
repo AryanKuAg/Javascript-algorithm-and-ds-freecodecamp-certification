@@ -5,8 +5,4 @@ class Node {
     }
 }
 
-const n1 = new Node('hi')
-console.log(n1.data)
-console.log(n1.next)
-const n2 = new Node('There', n1)
-console.log(n2.next)
+module.exports = Node
