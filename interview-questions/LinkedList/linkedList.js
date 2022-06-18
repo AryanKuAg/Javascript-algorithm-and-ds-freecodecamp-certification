@@ -13,13 +13,33 @@ class LinkedList {
         this.head.next = prev;
        
     }
+
+    size(){
+        let counter = 0;
+        let init = this.head;
+        while(init !== null){
+            init = init.next
+
+            counter++;
+
+        }
+
+
+        return counter; 
+    }
 }
 
-const nodeOne = new Node(5)
-const list = new LinkedList()
-list.head = nodeOne
-console.log(list)
-list.insertFirst(50)
-list.insertFirst(5000)
+// const nodeOne = new Node(5)
+// const list = new LinkedList()
+// list.head = nodeOne
+// console.log(list)
+// list.insertFirst(50)
+// list.insertFirst(5000)
 
-console.log(list)
+// console.log(list.size())
+
+const list = new LinkedList()
+list.insertFirst('a')
+list.insertFirst('b')
+list.insertFirst('c')
+console.log(list.size())
