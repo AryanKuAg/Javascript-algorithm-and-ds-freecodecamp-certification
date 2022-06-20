@@ -54,6 +54,9 @@ class LinkedList {
 
     removeLast() {
         let node = this.head
+        if(!node){
+            return; // for safety purposes
+        }
         while(node){
             if(!node.next.next){
                 break;
@@ -61,6 +64,20 @@ class LinkedList {
             node = node.next;
         }
         node.next = null;
+    }
+
+    insertLast(data) {
+        const brandNewNode = new Node(data)
+
+        let lastNode = this.head;
+
+        while(lastNode){
+            if(!lastNode.next){
+                break;
+            }
+            lastNode = lastNode.next;
+        }
+        lastNode.next = brandNewNode;
     }
 }
 
@@ -77,5 +94,5 @@ const list = new LinkedList()
 list.insertFirst('a')
 list.insertFirst('b')
 list.insertFirst('c')
-list.removeLast()
-console.log(list.getFirst())
+list.insertLast('aryan agrawal')
+console.log(list.getLast())
