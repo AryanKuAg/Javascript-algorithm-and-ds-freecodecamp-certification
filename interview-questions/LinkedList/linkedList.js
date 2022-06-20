@@ -69,15 +69,15 @@ class LinkedList {
     insertLast(data) {
         const brandNewNode = new Node(data)
 
-        let lastNode = this.head;
+        // let lastNode = this.head;
 
-        while(lastNode){
-            if(!lastNode.next){
-                break;
-            }
-            lastNode = lastNode.next;
-        }
-        lastNode.next = brandNewNode;
+        // while(lastNode){
+        //     if(!lastNode.next){
+        //         break;
+        //     }
+        //     lastNode = lastNode.next;
+        // }
+        this.getLast().next = brandNewNode;
     }
 }
 
