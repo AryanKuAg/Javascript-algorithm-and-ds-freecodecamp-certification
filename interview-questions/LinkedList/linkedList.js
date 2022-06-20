@@ -23,9 +23,11 @@ class LinkedList {
             counter++;
 
         }
-
-
         return counter; 
+    }
+
+    getFirst() {
+        return this.head
     }
 }
 
@@ -42,4 +44,4 @@ const list = new LinkedList()
 list.insertFirst('a')
 list.insertFirst('b')
 list.insertFirst('c')
-console.log(list.size())
+console.log(list.getFirst())
