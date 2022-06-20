@@ -29,6 +29,17 @@ class LinkedList {
     getFirst() {
         return this.head
     }
+
+    getLast() {
+        let lastNode = this.head;
+        while(lastNode){
+            if(lastNode.next === null){
+                break;
+            }
+            lastNode = lastNode.next;
+        }
+        return lastNode;
+    }
 }
 
 // const nodeOne = new Node(5)
@@ -44,4 +55,4 @@ const list = new LinkedList()
 list.insertFirst('a')
 list.insertFirst('b')
 list.insertFirst('c')
-console.log(list.getFirst())
+console.log(list.getLast())
