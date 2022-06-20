@@ -40,6 +40,10 @@ class LinkedList {
         }
         return lastNode;
     }
+
+    clear() {
+        this.head = null;
+    }
 }
 
 // const nodeOne = new Node(5)
@@ -55,4 +59,5 @@ const list = new LinkedList()
 list.insertFirst('a')
 list.insertFirst('b')
 list.insertFirst('c')
-console.log(list.getLast())
+list.clear()
+console.log(list.size())
