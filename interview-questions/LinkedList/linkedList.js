@@ -44,6 +44,24 @@ class LinkedList {
     clear() {
         this.head = null;
     }
+
+    removeFirst() {
+        if(!this.head){
+            return;
+        }
+        this.head = this.head.next;
+    }
+
+    removeLast() {
+        let node = this.head
+        while(node){
+            if(!node.next.next){
+                break;
+            }
+            node = node.next;
+        }
+        node.next = null;
+    }
 }
 
 // const nodeOne = new Node(5)
@@ -59,5 +77,5 @@ const list = new LinkedList()
 list.insertFirst('a')
 list.insertFirst('b')
 list.insertFirst('c')
-list.clear()
-console.log(list.size())
+list.removeLast()
+console.log(list.getFirst())
