@@ -68,6 +68,12 @@ class LinkedList {
 
     insertLast(data) {
         const brandNewNode = new Node(data)
+        if(!this.getLast()){
+            this.head = brandNewNode;
+        }else {
+            
+            this.getLast().next = brandNewNode;
+        }
 
         // let lastNode = this.head;
 
@@ -77,7 +83,21 @@ class LinkedList {
         //     }
         //     lastNode = lastNode.next;
         // }
-        this.getLast().next = brandNewNode;
+    }
+
+    getAt(index){
+        if(index < 0){
+            return null;
+        }
+        let node = this.head;
+        for(let i = 1; i<= index ; i++){
+            
+            node = node.next;
+            if(!node){
+                return null;
+            }
+        }
+        return node;
     }
 }
 
@@ -95,4 +115,4 @@ list.insertFirst('a')
 list.insertFirst('b')
 list.insertFirst('c')
 list.insertLast('aryan agrawal')
-console.log(list.getLast())
+console.log(list.getAt(4))
