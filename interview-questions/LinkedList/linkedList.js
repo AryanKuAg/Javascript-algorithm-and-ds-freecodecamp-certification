@@ -106,6 +106,29 @@ class LinkedList {
             return null;
         }
     } 
+
+    getMid(){
+       // if this.head === null return null
+       // varialbe slow and fast point to this.head
+       // try and catch, if fast.next.next goes to catch then break the loop and slow is the mid
+       // else try have fast assignnd to fast.next.next and slow to next
+       // problem 1: one node is going far more too. 
+       if(!this.head){
+        return null;
+       }
+       let slow  = this.head
+       let fast = this.head
+       while(true){
+        try{
+            fast = fast.next.next
+            slow = slow.next;
+        }catch(_){
+            break;
+        }
+       }
+
+       return slow;
+    }
 }
 
 // const nodeOne = new Node(5)
@@ -121,5 +144,11 @@ const list = new LinkedList()
 list.insertFirst('a')
 list.insertFirst('b')
 list.insertFirst('c')
-list.insertLast('aryan agrawal')
-console.log(list.getAt(4))
+list.insertFirst('d')
+
+console.log(list.getMid())
+
+
+// continue from lecture 90. I blowed up.
+
+exports.default = {Node: Node, LinkedList: LinkedList}
