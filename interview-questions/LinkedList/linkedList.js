@@ -91,14 +91,21 @@ class LinkedList {
         }
         let node = this.head;
         for(let i = 1; i<= index ; i++){
-            
-            node = node.next;
             if(!node){
                 return null;
             }
+            node = node.next;
+            
         }
         return node;
     }
+
+
+    removeAt(index) {
+        if(!this.head){
+            return null;
+        }
+    } 
 }
 
 // const nodeOne = new Node(5)
