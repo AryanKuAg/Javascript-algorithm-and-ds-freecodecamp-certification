@@ -14,13 +14,16 @@ const cartWork = createSlice({
             // else add item
 
             const title = action.payload.title
+            const tempList = state.cartItems
 
-            const titleIndex = state.cartItems.findIndex(e => e.title === title)
+            const titleIndex = tempList.findIndex(e => e.title === title)
             if(titleIndex >= 0){
-                state.cartItems[titleIndex].quantity += 1;
+                tempList[titleIndex].quantity += 1;
             }else{
-                state.cartItems.add(action.payload)
+                tempList.push({...action.payload, quantity: 1})
             }
+            state.cartItems = tempList
+            console.log('myitems', state.cartItems)
         }
     }
 })
