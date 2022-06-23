@@ -3,12 +3,14 @@ import { createSlice, configureStore } from "@reduxjs/toolkit"
 
 const initialCounter = {counter: 0, toggle: true}
 
-const counterSlice = createSlice({name:'counter', initialCounter, reducers:{
+const counterSlice = createSlice({name:'counter', initialState: initialCounter, reducers:{
     increment(state){
+        console.log(typeof state.counter)
         state.counter++;
     },
     increaseby5(state, action){
-        state.counter += action.value;
+        // console.log(action)
+        state.counter += action.payload.num;
     },
     decrement(state){
         state.counter--;
@@ -22,7 +24,7 @@ const initialAuth = {isLoggedIn: false}
 
 const authSlice = createSlice({
     name:'auth',
-    initialAuth,
+    initialState: initialAuth,
     reducers: {
         login(state){
             state.isLoggedIn = true;
