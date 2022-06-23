@@ -9,9 +9,12 @@ const Cart = (props) => {
     <Card className={classes.cart}>
       <h2>Your Shopping Cart</h2>
       <ul>
-       {items.map(e => <CartItem key={Math.random()}
+       {items.map(e => {
+        if(e.quantity <= 0) return;
+         return <CartItem key={Math.random()}
           item={{ title: e.title, quantity: e.quantity, total: 18, price: e.price }}
-        />) }
+        />
+       })}
       </ul>
     </Card>
   );

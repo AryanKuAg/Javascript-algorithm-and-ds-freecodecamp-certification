@@ -9,6 +9,23 @@ const cartWork = createSlice({
         toggleCart(state){
             state.showCart = !state.showCart
         },
+        increaseQuantity(state, action) {
+            const index = state.cartItems.findIndex(e => e.title === action.payload)
+
+            if (index >= 0){
+                // console.log('index', index)
+                // console.log('detail', state.cartItems[index])
+                state.cartItems[index].quantity++;
+                // console.log('quantity', state.showCart[index].quantity)
+            }
+
+        },decreaseQuantity(state, action){
+            const index = state.cartItems.findIndex(e => e.title === action.payload)
+
+            if (index >= 0){
+                state.cartItems[index].quantity--;
+            }
+        },
         addItems(state, action){ // action.payload  = {object of product}
             // if title exist then raise quantity
             // else add item
