@@ -4,4 +4,4 @@ const quotes = [{key: '1', id: '1', author: 'aryan', text:'ofcourse'},
 {key: '4', id: '4', author: 'un', text:'ofcourse'},
 {key: '5', id: '5', author: 'star', text:'ofcourse'}]
 
-export default quotes
+export default []

@@ -5,6 +5,7 @@ import QuoteForm from "./components/quotes/QuoteForm"
 import QuoteList from "./components/quotes/QuoteList";
 import quotes from "./demo-quotes";
 import HighlightedQuote from './components/quotes/HighlightedQuote'
+import NoQuotesFound from "./components/quotes/NoQuotesFound"
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Layout>
       <Switch>
         <Route path='/quotes' exact>
-        <QuoteList quotes={quotes}/>
+        {quotes.length <= 0 ? <NoQuotesFound/> :<QuoteList quotes={quotes}/>}
 
         </Route>
         <Route path='/new-quote' exact>
@@ -22,7 +23,7 @@ function App() {
         </Route>
 
       <Route path='/quotes/:quoteId'>
-        <HighlightedQuote text={'special'} author={'something'}/>
+        <HighlightedQuote/>
       </Route>
       </Switch>
       </Layout>
