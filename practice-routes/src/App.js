@@ -1,4 +1,4 @@
-import { Switch, Route} from "react-router-dom";
+import { Switch, Route, Redirect} from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import MainNavigation from "./components/layout/MainNavigation";
 import QuoteForm from "./components/quotes/QuoteForm"
@@ -6,6 +6,8 @@ import QuoteList from "./components/quotes/QuoteList";
 import quotes from "./demo-quotes";
 import HighlightedQuote from './components/quotes/HighlightedQuote'
 import NoQuotesFound from "./components/quotes/NoQuotesFound"
+import Comments from './components/comments/Comments'
+
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
       <MainNavigation/>
       <Layout>
       <Switch>
+        <Route path='/' exact>
+          <Redirect to='/quotes'/>
+        </Route>
         <Route path='/quotes' exact>
         {quotes.length <= 0 ? <NoQuotesFound/> :<QuoteList quotes={quotes}/>}
 
@@ -22,8 +27,13 @@ function App() {
 
         </Route>
 
-      <Route path='/quotes/:quoteId'>
+      <Route path='/quotes/:quoteId' exact>
         <HighlightedQuote/>
+      </Route>
+
+      <Route path='/quotes/:quoteId/comments' exact>
+        <HighlightedQuote/>
+       <Comments/>
       </Route>
       </Switch>
       </Layout>

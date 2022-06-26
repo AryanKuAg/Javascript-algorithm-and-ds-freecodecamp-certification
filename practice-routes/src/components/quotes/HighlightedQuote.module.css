@@ -18,3 +18,17 @@
   text-align: right;
   color: #a1e0e0;
 }
+
+/* .button {
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: 1px solid green;
+} */
+
+.quoteCardDiv{
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap : wrap; */
+  align-items: center;
+ 
+}
