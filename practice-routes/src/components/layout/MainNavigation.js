@@ -8,8 +8,8 @@ function MainNavigation() {
     <nav className={`${styles.header} ${styles.nav}`}>
         <h1 className={styles.logo}>Great Quotes</h1>
         <ul>
-            <li><NavLink to="/quotes">All Quotes</NavLink></li>
-            <li><NavLink to='/new-quote'>Add a Quote</NavLink></li>
+            <li><NavLink to="/quotes" activeClassName={styles.active}>All Quotes</NavLink></li>
+            <li><NavLink to='/new-quote' activeClassName={styles.active}>Add a Quote</NavLink></li>
         </ul>
     </nav>
   )
