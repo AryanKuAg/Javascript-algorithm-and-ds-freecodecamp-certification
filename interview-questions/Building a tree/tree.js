@@ -41,3 +41,5 @@ class Tree {
     }
   }
 }
+
+module.exports = Node;

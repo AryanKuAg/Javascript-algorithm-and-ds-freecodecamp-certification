@@ -35,6 +35,10 @@ function App() {
         <HighlightedQuote/>
        <Comments/>
       </Route>
+
+      <Route path="*">
+        <p>404 Page</p>
+      </Route>
       </Switch>
       </Layout>
      
