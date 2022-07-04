@@ -12,10 +12,19 @@ app.use(anotherFileRouter)
 app.use(cors())
 const port = process.env.PORT || 5555;
 
-// app.get('/', (req, res)=> {
+app.use((req, res, next) => {
+    console.log('middleware')
+next()
+})
 
-//     res.json(process)
-// })
+
+app.get('/poop', (req, res)=> {
+    const just = {t:'aryanaaa'}
+    console.log(req.url)
+    res.send(undefined)
+
+})
+
 
 
 app.listen(port, () => {
