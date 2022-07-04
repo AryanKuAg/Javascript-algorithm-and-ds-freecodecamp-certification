@@ -25,6 +25,16 @@ app.get('/poop', (req, res)=> {
 
 })
 
+const obj = {
+    name: 'aryan',
+    change() {
+        this.name = 'poop minister'
+    }
+}
+
+console.log(obj.name)
+obj.change()
+console.log(obj.name)
 
 
 app.listen(port, () => {
