@@ -3,6 +3,7 @@ import BeautyButton from "../components/BeautyButton";
 import "./HomePage.css"
 import mainImage from '../assets/main_screen_picture.png'
 import BeautyCard from "../components/BeautyCard";
+import beautyCardList from "../assets/beautyCardList";
 
 function HomePage() {
   return (
@@ -34,7 +35,15 @@ function HomePage() {
         </div>
 
       </main>
-      <section></section>
+      <section>
+        <h2>Browse Top Essential Career Courses</h2>
+        <div className="homePage__section__div">
+        {beautyCardList.map(e => {
+          <BeautyCard key={e.text} icon={e.icon} text={e.text}/>
+        })}
+        <button>Browse More</button>
+        </div>
+      </section>
     </div>
   );
 }

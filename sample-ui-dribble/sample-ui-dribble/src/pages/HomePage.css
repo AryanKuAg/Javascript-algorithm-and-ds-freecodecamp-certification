@@ -37,3 +37,9 @@
     width: 100%;
     
 }
+
+.homePage__section__div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

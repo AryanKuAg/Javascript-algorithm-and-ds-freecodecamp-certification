@@ -1,0 +1,16 @@
+.beautyCard__div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 160px;
+    width: 160px;
+    background-color: rgb(156, 58, 58);
+    border-radius: 20px;
+    padding: 20px;
+    background: hsla(342, 89%, 65%, 1);
+
+background: linear-gradient(315deg, hsla(342, 89%, 65%, 1) 0%, hsla(338, 100%, 77%, 1) 52%, hsla(339, 97%, 75%, 1) 100%);
+
+box-shadow: -1px 84px 86px -58px rgba(245,84,132,1);
+}

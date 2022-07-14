@@ -1,9 +1,9 @@
 import React from 'react'
-import "./BeautyButton.css"
+import "./BeautyCard.css"
 
-function BeautyCard() {
+function BeautyCard({icon, text}) {
   return (
-    <div className='beautyCard__div'>BeautyCard</div>
+    <div className='beautyCard__div'>{text}</div>
   )
 }
 
