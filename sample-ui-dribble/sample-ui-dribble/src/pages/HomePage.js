@@ -1,10 +1,13 @@
 import React from "react";
 import BeautyButton from "../components/BeautyButton";
 import "./HomePage.css"
+import mainImage from '../assets/main_screen_picture.png'
+import BeautyCard from "../components/BeautyCard";
 
 function HomePage() {
   return (
     <div>
+        <BeautyCard/>
       <header>
         <nav className="homePage__header__nav">
             <h1>E-Online</h1>
@@ -26,7 +29,9 @@ function HomePage() {
             <p>Our e-learning programs has been developed to be a vechicle of delivering multimedia learning solutions for your business.</p>
             <div className="homePage__main__box__items"><BeautyButton title='Sign Up' bgColor={'#A390FD'}/> <p>sd</p> <p>sfds</p></div>
         </div>
-        <div></div>
+        <div>
+            <img id='homePage__main__image' src={mainImage} alt="Our Main Image" />
+        </div>
 
       </main>
       <section></section>
