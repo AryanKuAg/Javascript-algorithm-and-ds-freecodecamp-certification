@@ -3,7 +3,9 @@ import "./BeautyCard.css"
 
 function BeautyCard({icon, text}) {
   return (
-    <div className='beautyCard__div'>{text}</div>
+    <div className='beautyCard__div'>{text}
+    <hr className='beautyCard__hr'/>
+    </div>
   )
 }
 

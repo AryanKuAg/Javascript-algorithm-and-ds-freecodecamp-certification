@@ -8,7 +8,7 @@ import beautyCardList from "../assets/beautyCardList";
 function HomePage() {
   return (
     <div>
-        <BeautyCard/>
+        
       <header>
         <nav className="homePage__header__nav">
             <h1>E-Online</h1>
@@ -39,7 +39,7 @@ function HomePage() {
         <h2>Browse Top Essential Career Courses</h2>
         <div className="homePage__section__div">
         {beautyCardList.map(e => {
-          <BeautyCard key={e.text} icon={e.icon} text={e.text}/>
+          return <BeautyCard key={e.text} icon={e.icon} text={e.text}/>
         })}
         <button>Browse More</button>
         </div>
