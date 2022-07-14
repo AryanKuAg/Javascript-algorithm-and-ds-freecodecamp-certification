@@ -1,0 +1,32 @@
+.homePage__header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homePage__header__nav__ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.homePage__main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px 0;
+    
+}
+
+.homePage__main__box__items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.homePage__main__box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

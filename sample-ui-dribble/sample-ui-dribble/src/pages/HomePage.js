@@ -1,0 +1,37 @@
+import React from "react";
+import BeautyButton from "../components/BeautyButton";
+import "./HomePage.css"
+
+function HomePage() {
+  return (
+    <div>
+      <header>
+        <nav className="homePage__header__nav">
+            <h1>E-Online</h1>
+            <div>
+                <ul className="homePage__header__nav__ul">
+                    <li>Home</li>
+                    <li>Category</li>
+                    <li>Courses</li>
+                    <li>Blog</li>
+                    {/* <button className="">Sign Up</button> */}
+                    <li><BeautyButton title='Sign Up' bgColor={'#A390FD'}/></li>
+                </ul>
+            </div>
+        </nav>
+      </header>
+      <main className="homePage__main">
+        <div className="homePage__main__box">
+            <h1>Investing in Knowledge and Your Future</h1>
+            <p>Our e-learning programs has been developed to be a vechicle of delivering multimedia learning solutions for your business.</p>
+            <div className="homePage__main__box__items"><BeautyButton title='Sign Up' bgColor={'#A390FD'}/> <p>sd</p> <p>sfds</p></div>
+        </div>
+        <div></div>
+
+      </main>
+      <section></section>
+    </div>
+  );
+}
+
+export default HomePage;
