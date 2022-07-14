@@ -54,7 +54,7 @@ function HomePage() {
           <img
             id="homePage__main__image"
             src={mainImage}
-            alt="Our Main Image"
+            alt="Our Main"
           />
         </div>
       </main>
@@ -62,7 +62,7 @@ function HomePage() {
         <h2>Browse Top Essential Career Courses</h2>
         <div className="homePage__section__div">
           {beautyCardList.map((e) => {
-            return <BeautyCard key={e.text} icon={e.icon} text={e.text} />;
+            return <BeautyCard key={e.text} icon={e.icon} text={e.text} startGrad={e.startGrad} endGrad={e.endGrad} shadow={e.shadow}/>;
           })}
           <div className="roundButton__div">
             <button className="beautyButton roundButton">
