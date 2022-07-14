@@ -26,8 +26,8 @@ function HomePage() {
       </header>
       <main className="homePage__main">
         <div className="homePage__main__box">
-            <h1>Investing in Knowledge and Your Future</h1>
-            <p>Our e-learning programs has been developed to be a vechicle of delivering multimedia learning solutions for your business.</p>
+            <h1>Investing in Knowledge and <span id='your__future'>Your Future</span> </h1>
+            <p id='homePage__para__desc'>Our e-learning programs has been developed to be a vechicle of delivering multimedia learning solutions for your business.</p>
             <div className="homePage__main__box__items"><BeautyButton title='Sign Up' bgColor={'#A390FD'}/> <p>sd</p> <p>sfds</p></div>
         </div>
         <div>
@@ -41,7 +41,10 @@ function HomePage() {
         {beautyCardList.map(e => {
           return <BeautyCard key={e.text} icon={e.icon} text={e.text}/>
         })}
-        <button>Browse More</button>
+        <div>
+        <BeautyButton title='Sign Up' bgColor={'#A390FD'}/>
+
+        </div>
         </div>
       </section>
     </div>

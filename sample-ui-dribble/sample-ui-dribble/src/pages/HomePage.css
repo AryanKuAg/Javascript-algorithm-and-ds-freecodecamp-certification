@@ -44,3 +44,21 @@
     align-items: center;
     justify-content: space-between;
 }
+
+#your__future{
+    color:#DD7D3B;
+}
+
+.homePage__main__box h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+#homePage__para__desc{
+    color: #A1A2AA;
+}
+
+.homePage__header__nav h1{
+    font-weight: 700;
+}
