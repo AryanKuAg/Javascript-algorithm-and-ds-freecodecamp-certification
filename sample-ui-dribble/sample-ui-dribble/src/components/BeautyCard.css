@@ -18,6 +18,7 @@ box-shadow: -1px 64px 86px -30px hsla(342, 89%, 65%, 1);
 .beautyCard__div__image{
     height: 40px;
     color: white;
+    filter: brightness(0) invert(1);
     /* background-color: white; */
 }
 

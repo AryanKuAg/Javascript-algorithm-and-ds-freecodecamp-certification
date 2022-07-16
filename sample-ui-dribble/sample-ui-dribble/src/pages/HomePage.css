@@ -105,3 +105,59 @@ section h2 {
     color: #A1A2AA;
 
 }
+
+
+#homePage__section{
+    margin: 50px 0;
+}
+
+
+@media only screen and (max-width: 1080px){
+    .homePage__section__div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 60px;
+        place-items: center;
+    }
+
+    .homePage__main__box h1 {
+        font-size: 3rem;
+       
+    }
+
+    .homePage__data__item__div h1{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 850px){
+    .homePage__section__div{
+        row-gap: 60px;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media only screen and (max-width: 500px){
+    .homePage__section__div{
+        row-gap: 60px;
+        
+        grid-template-columns: 1fr ;
+        
+    }
+    .homePage__main{
+        display: grid;
+        grid-template-columns: 1fr;      
+          
+    }
+    #homePage__image__box{
+       grid-row: 1 / 2;
+       grid-column: 1/ -1;
+       
+    }
+li p{
+    display: none;
+}
+
+}

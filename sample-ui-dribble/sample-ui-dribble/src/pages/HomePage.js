@@ -14,12 +14,14 @@ function HomePage() {
           <h1>E-Online</h1>
           <div>
             <ul className="homePage__header__nav__ul">
-              <li>
-                <strong>Home</strong>
+              <li><p>
+                   <strong>Home</strong>
+              </p>
+             
               </li>
-              <li>Category</li>
-              <li>Courses</li>
-              <li>Blog</li>
+              <li><p>Category</p></li>
+              <li><p>Courses</p></li>
+              <li><p>Blog</p></li>
               {/* <button className="">Sign Up</button> */}
               <li>
                 <BeautyButton title="Sign Up" bgColor={"#A390FD"} />
@@ -50,7 +52,7 @@ function HomePage() {
             </div>
           </div>
         </div>
-        <div>
+        <div id='homePage__image__box'>
           <img
             id="homePage__main__image"
             src={mainImage}
@@ -58,7 +60,7 @@ function HomePage() {
           />
         </div>
       </main>
-      <section>
+      <section id='homePage__section'>
         <h2>Browse Top Essential Career Courses</h2>
         <div className="homePage__section__div">
           {beautyCardList.map((e) => {
@@ -72,11 +74,11 @@ function HomePage() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
