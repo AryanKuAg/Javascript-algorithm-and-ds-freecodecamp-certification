@@ -40,3 +40,11 @@ type some = {
 }
 
 let ss: some;
+
+const somethinggg = (no: number): string  =>  {
+    return ''
+}
+
+const nulla = (some: any) : void => {
+    console.log(some)
+}
