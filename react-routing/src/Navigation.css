@@ -1,0 +1,9 @@
+a.active{
+    font-weight: 900;
+    text-decoration: underline;
+    color: rebeccapurple;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
