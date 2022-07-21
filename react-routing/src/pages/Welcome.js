@@ -1,10 +1,13 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Welcome() {
   return (
-    <div>Welcome <Link to="/agrawal">welcome page link i guess </Link></div>
-  )
+    <div>
+      <p>Welcome</p>
+      <Link to="/">Link to Home Page</Link>
+    </div>
+  );
 }
 
-export default Welcome
+export default Welcome;
