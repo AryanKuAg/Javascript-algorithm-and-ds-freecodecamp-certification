@@ -1,7 +1,12 @@
 import React from "react";
+// import { Redirect } from "react-router-dom";
 
 function ContactUs() {
-  return <div>ContactUs</div>;
+  return (
+    <div>
+      <p>Contact us</p>
+    </div>
+  );
 }
 
 export default ContactUs;

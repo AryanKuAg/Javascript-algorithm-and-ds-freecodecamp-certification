@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/homePage" element={component} />
+        <Route path="/homePage" element={component} exact />
         <Route
           path="/aboutUs"
           element={
@@ -24,6 +24,7 @@ function App() {
               <AboutUs />
             </Navigation>
           }
+          exact
         />
         <Route
           path="/contactUs"
@@ -34,13 +35,13 @@ function App() {
           }
         />
         <Route
-          path="/feedback"
+          path="/feedback/:alemantrix"
           element={
             <Navigation>
               <Feedback />
             </Navigation>
           }
-        />
+        />{" "}
       </Routes>
     </div>
   );

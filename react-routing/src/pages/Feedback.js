@@ -1,7 +1,10 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 function Feedback() {
-  return <div>Feedback</div>;
+  const param = useParams();
+
+  return <div>{param.alemantrix}</div>;
 }
 
 export default Feedback;
